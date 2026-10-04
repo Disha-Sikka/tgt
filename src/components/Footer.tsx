@@ -12,21 +12,21 @@ const Footer = () => (
         <div className="md:col-span-1 space-y-4">
           <Link href="/home" className="flex items-center gap-2.5">
             <SvgLogo className="w-8 h-8 shrink-0 bg-transparent" />
-            <span className="font-serif text-xl font-bold text-[#2f4739] dark:text-[#489a69]">
+            <span className="font-serif text-xl font-medium text-[#2f4739] dark:text-[#489a69]">
               The Green Turtles
             </span>
           </Link>
-          <p className="text-sm text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+          <p className="text-sm text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
             Discover, compare, and choose better. A curated marketplace connecting mindful shoppers with genuinely sustainable makers.
           </p>
         </div>
 
         {/* Marketplace (Buyer) */}
         <div className="space-y-3">
-          <h4 className="text-xs font-bold uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373]">
+          <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373]">
             Marketplace
           </h4>
-          <ul className="space-y-2 text-sm font-medium text-[#374151] dark:text-[#d1d5db]">
+          <ul className="space-y-2 text-sm font-medium text-[#4a443c] dark:text-[#d8d0c3]">
             <li>
               <Link href="/home" className="hover:text-[#2f4739] dark:hover:text-[#489a69] transition">
                 Home
@@ -52,10 +52,10 @@ const Footer = () => (
 
         {/* For Sellers & Brands */}
         <div className="space-y-3">
-          <h4 className="text-xs font-bold uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373]">
+          <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373]">
             For Brands
           </h4>
-          <ul className="space-y-2 text-sm font-medium text-[#374151] dark:text-[#d1d5db]">
+          <ul className="space-y-2 text-sm font-medium text-[#4a443c] dark:text-[#d8d0c3]">
             <li>
               <Link href="/seller-home" className="hover:text-[#2f4739] dark:hover:text-[#489a69] transition">
                 Seller Home
@@ -81,10 +81,10 @@ const Footer = () => (
 
         {/* Mission & Help */}
         <div className="space-y-3">
-          <h4 className="text-xs font-bold uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373]">
+          <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373]">
             Company
           </h4>
-          <ul className="space-y-2 text-sm font-medium text-[#374151] dark:text-[#d1d5db]">
+          <ul className="space-y-2 text-sm font-medium text-[#4a443c] dark:text-[#d8d0c3]">
             <li>
               <Link href="/about" className="hover:text-[#2f4739] dark:hover:text-[#489a69] transition">
                 Our Mission & Story
@@ -104,7 +104,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="pt-8 border-t border-[#e7e0d5] dark:border-[#2a3d33] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-[#6b7280] dark:text-[#9ca3af]">
+      <div className="pt-8 border-t border-[#e7e0d5] dark:border-[#2a3d33] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-[#7a7268] dark:text-[#a49b8f]">
         <p>
           © {new Date().getFullYear()} The Green Turtles · All rights reserved.
         </p>

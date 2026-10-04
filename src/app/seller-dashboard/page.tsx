@@ -115,7 +115,7 @@ const SellerDashboard = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 text-[#1c1917]">
+    <div className="max-w-7xl mx-auto px-4 py-12 text-[#1f1c18]">
       <DashboardHeader productCount={products.length} walletBalance={walletBalance} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

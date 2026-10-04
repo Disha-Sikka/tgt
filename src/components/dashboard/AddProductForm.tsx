@@ -70,20 +70,20 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
   };
 
   return (
-    <div className="bg-white dark:bg-[#1a241f] p-8 rounded-[2.5rem] border border-[#ede4d5] dark:border-[#2a3d33] shadow-card sticky top-8 text-[#111827] dark:text-[#f4f0ea]">
+    <div className="bg-white dark:bg-[#1a241f] p-8 rounded-2xl border border-[#ede4d5] dark:border-[#2a3d33] shadow-card sticky top-8 text-[#1f1c18] dark:text-[#f4f0ea]">
       <div className="space-y-1 mb-6">
-        <span className="text-xs uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373] font-bold">New Listing</span>
-        <h2 className="text-2xl font-serif font-bold flex items-center gap-2">
+        <span className="text-xs uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373] font-bold">New Listing</span>
+        <h2 className="text-2xl font-serif font-medium flex items-center gap-2">
           <Upload className="text-[#2f4739] dark:text-[#489a69] w-6 h-6" /> Add Product
         </h2>
       </div>
 
       <div className="space-y-4">
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Product Name *</label>
+          <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Product Name *</label>
           <input
             placeholder="e.g. Bamboo Toothbrush"
-            className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+            className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
@@ -91,21 +91,21 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Price (Rs.) *</label>
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Price (Rs.) *</label>
             <input
               placeholder="299"
               type="number"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
               value={form.price}
               onChange={(e) => setForm({ ...form, price: e.target.value })}
             />
           </div>
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Quantity *</label>
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Quantity *</label>
             <input
               placeholder="50"
               type="number"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
               value={form.number_of_item}
               onChange={(e) => setForm({ ...form, number_of_item: e.target.value })}
             />
@@ -114,19 +114,19 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Material Used</label>
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Material Used</label>
             <input
               placeholder="e.g. Bamboo, Cotton"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
               value={form.material_used}
               onChange={(e) => setForm({ ...form, material_used: e.target.value })}
             />
           </div>
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Weight (kg/g)</label>
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Weight (kg/g)</label>
             <input
               placeholder="e.g. 500g"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
               value={form.weight}
               onChange={(e) => setForm({ ...form, weight: e.target.value })}
             />
@@ -134,27 +134,27 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Category</label>
+          <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Category</label>
           <input
             placeholder="e.g. Personal Care"
-            className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af]"
+            className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f]"
             value={form.category}
             onChange={(e) => setForm({ ...form, category: e.target.value })}
           />
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Description</label>
+          <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Description</label>
           <textarea
             placeholder="What makes this product special and sustainable?"
-            className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition h-24 text-sm text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] resize-none"
+            className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none transition h-24 text-sm text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] resize-none"
             value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })}
           />
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">Product Image</label>
+          <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">Product Image</label>
           <input
             ref={fileInputRef}
             type="file"
@@ -183,7 +183,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
                     fileInputRef.current?.click();
                   }}
                   disabled={uploading}
-                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#faf7f2] dark:bg-[#121815] p-2.5 rounded-xl text-[#4b5563] dark:text-[#9ca3af] hover:text-[#111827] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1.5 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#f7f1e6] dark:bg-[#121815] p-2.5 rounded-xl text-[#5e574d] dark:text-[#a49b8f] hover:text-[#1f1c18] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1.5 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {uploading ? (
                     <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -195,7 +195,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
                 <button
                   type="button"
                   onClick={generatePlaceholderUrl}
-                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#faf7f2] dark:bg-[#121815] p-2.5 rounded-xl text-[#4b5563] dark:text-[#9ca3af] hover:text-[#111827] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1"
+                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#f7f1e6] dark:bg-[#121815] p-2.5 rounded-xl text-[#5e574d] dark:text-[#a49b8f] hover:text-[#1f1c18] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1"
                 >
                   <ImagePlus className="w-3.5 h-3.5 text-[#8d6b4f] dark:text-[#d4a373]" />
                   Placeholder
@@ -203,7 +203,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
                 <button
                   type="button"
                   onClick={() => setShowUrlInput(!showUrlInput)}
-                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#faf7f2] dark:bg-[#121815] p-2.5 rounded-xl text-[#4b5563] dark:text-[#9ca3af] hover:text-[#111827] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1"
+                  className="flex-1 border border-[#ede4d5] dark:border-[#2a3d33] bg-[#f7f1e6] dark:bg-[#121815] p-2.5 rounded-xl text-[#5e574d] dark:text-[#a49b8f] hover:text-[#1f1c18] hover:bg-[#f7f4ee] transition text-xs font-semibold flex items-center justify-center gap-1"
                 >
                   <Link2 className="w-3.5 h-3.5 text-[#8d6b4f] dark:text-[#d4a373]" /> URL
                 </button>
@@ -214,7 +214,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
                   <input
                     type="url"
                     placeholder="https://example.com/image.jpg"
-                    className="flex-1 bg-[#faf7f2] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-xs text-[#111827] dark:text-[#f4f0ea]"
+                    className="flex-1 bg-[#f7f1e6] dark:bg-[#121815] border border-[#ede4d5] dark:border-[#2a3d33] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none transition text-xs text-[#1f1c18] dark:text-[#f4f0ea]"
                     value={imageUrl}
                     onChange={(e) => setImageUrl(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleUrlSubmit()}
@@ -222,7 +222,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
                   <button
                     type="button"
                     onClick={handleUrlSubmit}
-                    className="bg-[#2f4739] text-[#faf7f2] px-4 py-2 rounded-xl hover:bg-[#23372c] transition font-semibold text-xs"
+                    className="bg-[#2f4739] text-[#f7f1e6] px-4 py-2 rounded-xl hover:bg-[#23372c] transition font-semibold text-xs"
                   >
                     Add
                   </button>
@@ -238,7 +238,7 @@ const AddProductForm = ({ form, setForm, handleUpload, handleAddProduct }: AddPr
 
         <button
           onClick={handleAddProduct}
-          className="w-full mt-4 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] py-4 rounded-full font-semibold shadow-soft transition text-sm active:scale-95"
+          className="w-full mt-4 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] py-4 rounded-lg font-semibold shadow-soft transition text-sm active:scale-95"
         >
           Launch Product
         </button>

@@ -75,14 +75,15 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Playfair Display", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "Plus Jakarta Sans", "Inter", "system-ui", "sans-serif"],
+        hand: ["var(--font-hand)", "Caveat", "cursive"],
+        serif: ["var(--font-serif)", "Fraunces", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Karla", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 2px 12px -2px rgba(47, 71, 57, 0.05), 0 1px 4px -1px rgba(47, 71, 57, 0.03)",
-        card: "0 4px 20px -2px rgba(47, 71, 57, 0.06), 0 2px 6px -1px rgba(47, 71, 57, 0.03)",
-        hover: "0 12px 30px -4px rgba(47, 71, 57, 0.1), 0 4px 12px -2px rgba(47, 71, 57, 0.04)",
-        dropdown: "0 16px 40px -6px rgba(47, 71, 57, 0.12), 0 4px 12px -2px rgba(47, 71, 57, 0.05)",
+        soft: "0 1px 2px rgba(60, 48, 32, 0.06)",
+        card: "0 1px 0 rgba(60, 48, 32, 0.05), 0 2px 6px -2px rgba(60, 48, 32, 0.08)",
+        hover: "0 1px 0 rgba(60, 48, 32, 0.05), 0 10px 24px -10px rgba(60, 48, 32, 0.22)",
+        dropdown: "0 12px 32px -8px rgba(60, 48, 32, 0.2), 0 2px 6px -2px rgba(60, 48, 32, 0.08)",
       },
       borderRadius: {
         pill: "9999px",

@@ -75,19 +75,19 @@ const RegisterPage = () => {
   };
 
   return (
-    <section className="py-16 px-4 max-w-lg mx-auto text-[#111827] dark:text-[#f4f0ea]">
-      <div className="bg-white dark:bg-[#1a241f] border-2 border-[#e7e0d5] dark:border-[#2a3d33] rounded-[2.5rem] p-8 md:p-12 shadow-card space-y-8">
+    <section className="py-16 px-4 max-w-lg mx-auto text-[#1f1c18] dark:text-[#f4f0ea]">
+      <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-2xl p-8 md:p-12 shadow-card space-y-8">
         <div className="text-center space-y-3">
           <div className="flex justify-center">
             <SvgLogo className="w-14 h-14 bg-transparent" />
           </div>
-          <span className="text-xs uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373] font-bold">
+          <span className="text-xs uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373] font-bold">
             Join The Movement
           </span>
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold">
+          <h1 className="text-3xl sm:text-4xl font-serif font-medium">
             Join <span className="text-[#2f4739] dark:text-[#489a69]">The Green Turtles</span>
           </h1>
-          <p className="text-sm text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-sm text-[#5e574d] dark:text-[#a49b8f]">
             Select your account type to get started.
           </p>
         </div>
@@ -99,8 +99,8 @@ const RegisterPage = () => {
             onClick={() => setRole('buyer')}
             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-full text-sm font-bold transition ${
               role === 'buyer'
-                ? 'bg-[#2f4739] text-[#faf7f2] shadow-xs'
-                : 'text-[#4b5563] dark:text-[#9ca3af] hover:text-[#111827] dark:hover:text-[#f4f0ea]'
+                ? 'bg-[#2f4739] text-[#f7f1e6] shadow-xs'
+                : 'text-[#5e574d] dark:text-[#a49b8f] hover:text-[#1f1c18] dark:hover:text-[#f4f0ea]'
             }`}
           >
             <ShoppingBag className="w-4 h-4" /> As a Buyer
@@ -110,8 +110,8 @@ const RegisterPage = () => {
             onClick={() => setRole('seller')}
             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-full text-sm font-bold transition ${
               role === 'seller'
-                ? 'bg-[#2f4739] text-[#faf7f2] shadow-xs'
-                : 'text-[#4b5563] dark:text-[#9ca3af] hover:text-[#111827] dark:hover:text-[#f4f0ea]'
+                ? 'bg-[#2f4739] text-[#f7f1e6] shadow-xs'
+                : 'text-[#5e574d] dark:text-[#a49b8f] hover:text-[#1f1c18] dark:hover:text-[#f4f0ea]'
             }`}
           >
             <Store className="w-4 h-4" /> As a Seller
@@ -120,13 +120,13 @@ const RegisterPage = () => {
 
         <form onSubmit={handleRegister} className="space-y-5">
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
               Email Address *
             </label>
             <input
               type="email"
               placeholder="name@example.com"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               required
@@ -134,13 +134,13 @@ const RegisterPage = () => {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
               Password *
             </label>
             <input
               type="password"
               placeholder="••••••••"
-              className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium"
+              className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               required
@@ -150,13 +150,13 @@ const RegisterPage = () => {
           {role === 'seller' && (
             <div className="space-y-4 pt-2 border-t border-[#e7e0d5] dark:border-[#2a3d33] animate-in fade-in duration-300">
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+                <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                   Shop or Brand Name *
                 </label>
                 <input
                   type="text"
                   placeholder="e.g. EcoCraft Studios"
-                  className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium"
+                  className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium"
                   onChange={(e) => setShopName(e.target.value)}
                   value={shopName}
                   required
@@ -164,13 +164,13 @@ const RegisterPage = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+                <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                   GST Number or Artisan ID *
                 </label>
                 <input
                   type="text"
                   placeholder="22AAAAA0000A1Z5"
-                  className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition uppercase text-sm font-medium"
+                  className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition uppercase text-sm font-medium"
                   onChange={(e) => setGstNo(e.target.value)}
                   value={gstNo}
                   required
@@ -178,12 +178,12 @@ const RegisterPage = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+                <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                   Shop Location / Address *
                 </label>
                 <textarea
                   placeholder="Full operating address of your sustainable brand"
-                  className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium h-24 resize-none"
+                  className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium h-24 resize-none"
                   onChange={(e) => setShopLocation(e.target.value)}
                   value={shopLocation}
                   required
@@ -195,7 +195,7 @@ const RegisterPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 rounded-full transition shadow-soft text-base flex items-center justify-center gap-2 active:scale-95"
+            className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 rounded-lg transition shadow-soft text-base flex items-center justify-center gap-2 active:scale-95"
           >
             {loading ? 'Creating Account...' : 'Create Account'}
             <ArrowRight className="w-4 h-4" />
@@ -203,7 +203,7 @@ const RegisterPage = () => {
         </form>
 
         <div className="text-center pt-2 border-t border-[#e7e0d5] dark:border-[#2a3d33]">
-          <p className="text-sm text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-sm text-[#5e574d] dark:text-[#a49b8f]">
             Already have an account?{' '}
             <Link
               href="/login"

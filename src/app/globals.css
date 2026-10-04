@@ -3,22 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #faf7f2;
-  --foreground: #111827;
-  --muted-text: #374151;
+  --background: #f7f1e6;
+  --foreground: #1f1c18;
+  --muted-text: #4a443c;
   --primary: #2f4739;
   --primary-hover: #23372c;
   --accent: #8d6b4f;
-  --cream: #faf7f2;
+  --cream: #f7f1e6;
   --cream-card: #ffffff;
   --sand: #e6ded1;
   --border-muted: #d9cebe;
+  --accent-warm: #b45f3c;
 }
 
 .dark {
   --background: #121815;
   --foreground: #f4f0ea;
-  --muted-text: #cbd5e1;
+  --muted-text: #d8d0c3;
   --primary: #489a69;
   --primary-hover: #3a8257;
   --accent: #d4a373;
@@ -26,32 +27,71 @@
   --cream-card: #1c2620;
   --sand: #2a3d33;
   --border-muted: #2c3b31;
+  --accent-warm: #e09a72;
 }
 
 body {
-  font-family: var(--font-sans), 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans), 'Karla', system-ui, -apple-system, sans-serif;
   background-color: var(--background);
+  /* faint paper grain so large cream areas don't read as flat digital fill */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color: var(--foreground);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
+  font-feature-settings: "kern", "liga";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings typography */
-h1, h2, h3, .font-editorial {
-  font-family: var(--font-serif), 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-  letter-spacing: -0.015em;
+/* Headings typography: Fraunces with its soft optical axis, set lighter and tighter */
+h1, h2, h3, .font-editorial, .font-serif {
+  font-family: var(--font-serif), 'Fraunces', Georgia, serif;
+  font-variation-settings: "SOFT" 60;
+  letter-spacing: -0.02em;
 }
 
-/* Readability enhancements: clear text contrast */
+h1, h2 {
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
 p {
   color: var(--muted-text);
   font-weight: 400;
+  text-wrap: pretty;
 }
 
 .dark p {
-  color: #cbd5e1;
+  color: #d8d0c3;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+/* Small handwritten note used above section headings */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-hand), 'Caveat', cursive;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--accent-warm);
+  transform: rotate(-2deg);
+  letter-spacing: 0;
+}
+.eyebrow svg {
+  display: none;
+}
+
+/* Hand-drawn underline for the one highlighted word in a headline */
+.scribble {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8.5c30-4 62-6.5 98-5.5 32 .9 62 3.2 98 1.2' fill='none' stroke='%23b45f3c' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.18em;
+  padding-bottom: 0.08em;
 }
 
 /* Custom scrollbar */

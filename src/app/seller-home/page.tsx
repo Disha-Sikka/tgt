@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import {
   Store,
   ShoppingBag,
-  Sparkles,
+  Sprout,
   ArrowRight,
   ShieldCheck,
   TrendingUp,
@@ -38,37 +38,35 @@ const SellerHomePage = () => {
   };
 
   return (
-    <div className="py-6 space-y-16 text-[#1c1917] dark:text-[#f4f0ea]">
+    <div className="py-6 space-y-16 text-[#1f1c18] dark:text-[#f4f0ea]">
       {/* HERO SECTION FOR SELLERS */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-[#f2f6f3] via-[#faf7f2] to-[#e6ded1] dark:from-[#1b2620] dark:via-[#161f1a] dark:to-[#121815] py-16 md:py-24 rounded-[2.5rem] border border-[#e7e0d5] dark:border-[#2a3d33] shadow-card">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#2f4739]/10 dark:bg-[#489a69]/15 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-[#8d6b4f]/10 dark:bg-[#d4a373]/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="relative overflow-hidden bg-[#f1e9dc] dark:bg-[#18211c] py-16 md:py-24 rounded-2xl border border-[#e7e0d5] dark:border-[#2a3d33] shadow-card">
 
         <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-[#2f4739]/10 dark:bg-[#489a69]/20 border border-[#2f4739]/20 dark:border-[#489a69]/40 px-4 py-2 rounded-full text-[#2f4739] dark:text-[#489a69] font-bold text-xs uppercase tracking-widest mb-6">
-            <Sparkles className="w-4 h-4" />
+          <div className="eyebrow mb-5">
+            <Sprout className="w-4 h-4" />
             For Eco-Brands & Sustainable Makers
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[1.12] text-[#111827] dark:text-[#f4f0ea] tracking-tight">
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium mb-6 leading-[1.12] text-[#1f1c18] dark:text-[#f4f0ea] tracking-tight">
             Grow Your Sustainable Brand on <span className="italic font-serif text-[#2f4739] dark:text-[#489a69]">The Green Turtles</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl mb-10 max-w-2xl mx-auto text-[#374151] dark:text-[#d1d5db] font-normal leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl mb-10 max-w-2xl mx-auto text-[#4a443c] dark:text-[#d8d0c3] font-normal leading-relaxed">
             Stop competing against cheap fast-fashion and misleading greenwashing. Join an exclusive collective of verified eco-makers reaching mindful shoppers who value genuine impact.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={handleStartSelling}
-              className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] py-4 px-9 rounded-full font-semibold shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
+              className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] py-4 px-9 rounded-lg font-semibold shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
             >
               {isSeller ? "Go to Seller Dashboard" : "Start Selling Now"} <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
               onClick={() => router.push('/why-partner-us')}
-              className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#354a3e] text-[#111827] dark:text-[#f4f0ea] py-4 px-9 rounded-full font-semibold hover:border-[#2f4739] dark:hover:border-[#489a69] transition active:scale-95 text-base shadow-soft"
+              className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#354a3e] text-[#1f1c18] dark:text-[#f4f0ea] py-4 px-9 rounded-lg font-semibold hover:border-[#2f4739] dark:hover:border-[#489a69] transition active:scale-95 text-base shadow-soft"
             >
               Why Partner With Us
             </button>
@@ -79,10 +77,10 @@ const SellerHomePage = () => {
       {/* FOUR SELLER ADVANTAGES */}
       <div className="space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <p className="text-xs uppercase tracking-[0.22em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
+          <p className="eyebrow">
             Seller Advantages
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             Built Specifically for <span className="italic font-serif text-[#2f4739] dark:text-[#489a69]">Eco-Makers</span>
           </h2>
         </div>
@@ -114,15 +112,15 @@ const SellerHomePage = () => {
             return (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-7 rounded-3xl shadow-card space-y-3"
+                className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-7 rounded-xl shadow-card space-y-3"
               >
                 <div className="p-3.5 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-2xl w-fit">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+                <h3 className="font-serif text-xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                   {item.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+                <p className="text-sm md:text-base text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -132,15 +130,15 @@ const SellerHomePage = () => {
       </div>
 
       {/* HOW SELLING WORKS (4 STEPS) */}
-      <div className="bg-white dark:bg-[#161f1a] border border-[#e7e0d5] dark:border-[#2a3d33] py-16 md:py-20 rounded-[2.5rem] px-6 md:px-12 shadow-card space-y-12">
+      <div className="bg-white dark:bg-[#161f1a] border border-[#e7e0d5] dark:border-[#2a3d33] py-16 md:py-20 rounded-2xl px-6 md:px-12 shadow-card space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <p className="text-xs uppercase tracking-[0.22em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
+          <p className="eyebrow">
             Simple 4-Step Process
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             How Selling Works
           </h2>
-          <p className="text-base md:text-lg text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-base md:text-lg text-[#5e574d] dark:text-[#a49b8f]">
             Get your sustainable brand onboarded and discoverable in four straightforward steps.
           </p>
         </div>
@@ -170,15 +168,15 @@ const SellerHomePage = () => {
           ].map((s, idx) => (
             <div
               key={idx}
-              className="bg-[#faf7f2] dark:bg-[#1a241f] border border-[#ede4d5] dark:border-[#2a3d33] p-6 rounded-3xl space-y-3 relative"
+              className="bg-[#f7f1e6] dark:bg-[#1a241f] border border-[#ede4d5] dark:border-[#2a3d33] p-6 rounded-xl space-y-3 relative"
             >
-              <span className="text-xs font-bold text-[#2f4739] dark:text-[#489a69] bg-[#e8ede9] dark:bg-[#223028] px-3 py-1 rounded-full w-fit inline-block">
+              <span className="text-xs font-bold text-[#2f4739] dark:text-[#489a69] bg-[#e8ede9] dark:bg-[#223028] px-3 py-1 rounded-lg w-fit inline-block">
                 Step {s.step}
               </span>
-              <h4 className="font-serif text-xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+              <h4 className="font-serif text-xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                 {s.title}
               </h4>
-              <p className="text-sm text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+              <p className="text-sm text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -188,7 +186,7 @@ const SellerHomePage = () => {
         <div className="text-center pt-4">
           <button
             onClick={handleStartSelling}
-            className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] py-4 px-10 rounded-full font-semibold transition active:scale-95 shadow-soft text-base inline-flex items-center gap-2"
+            className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] py-4 px-10 rounded-lg font-semibold transition active:scale-95 shadow-soft text-base inline-flex items-center gap-2"
           >
             {isSeller ? "Access Your Inventory Dashboard" : "Register as a Seller Today"}
             <ArrowRight className="w-4 h-4" />
@@ -197,21 +195,21 @@ const SellerHomePage = () => {
       </div>
 
       {/* WHY PARTNER CALLOUT BANNER */}
-      <div className="rounded-[2.5rem] bg-gradient-to-r from-[#e8ede9] via-[#f4efe6] to-[#ece5d8] dark:from-[#1b2620] dark:via-[#161f1a] dark:to-[#121815] border-2 border-[#2f4739]/30 dark:border-[#489a69]/40 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-card">
+      <div className="rounded-2xl bg-[#f1e9dc] dark:bg-[#18211c] border border-[#2f4739]/30 dark:border-[#489a69]/40 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-card">
         <div className="space-y-3 max-w-2xl">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2f4739] dark:text-[#489a69]">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#2f4739] dark:text-[#489a69]">
             <Award className="w-4 h-4" /> Deep Dive
           </div>
-          <h3 className="font-serif text-3xl md:text-4xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+          <h3 className="font-serif text-3xl md:text-4xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             Want to learn more about our Brand Collective?
           </h3>
-          <p className="text-base text-[#374151] dark:text-[#d1d5db] leading-relaxed">
+          <p className="text-base text-[#4a443c] dark:text-[#d8d0c3] leading-relaxed">
             Read our in-depth partnership guide exploring our 4 pillars: Reach, Visibility, Insights, and Trust Standards.
           </p>
         </div>
         <Link
           href="/why-partner-us"
-          className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 px-8 rounded-full shadow-soft transition active:scale-95 text-base shrink-0 inline-flex items-center gap-2"
+          className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 px-8 rounded-lg shadow-soft transition active:scale-95 text-base shrink-0 inline-flex items-center gap-2"
         >
           Explore Why Partner With Us <ArrowRight className="w-4 h-4" />
         </Link>
