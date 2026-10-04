@@ -3,7 +3,7 @@
 import React, { useState, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Lock, Mail, ArrowRight, Sparkles } from 'lucide-react';
+import { Lock, Mail, ArrowRight, Sprout } from 'lucide-react';
 import SvgLogo from '@/svg';
 import { AppContext } from '@/context/AppContext';
 
@@ -92,26 +92,26 @@ const LoginPage = () => {
   };
 
   return (
-    <section className="py-16 px-4 max-w-lg mx-auto text-[#111827] dark:text-[#f4f0ea]">
-      <div className="bg-white dark:bg-[#1a241f] border-2 border-[#e7e0d5] dark:border-[#2a3d33] rounded-[2.5rem] p-8 md:p-12 shadow-card space-y-8">
+    <section className="py-16 px-4 max-w-lg mx-auto text-[#1f1c18] dark:text-[#f4f0ea]">
+      <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-2xl p-8 md:p-12 shadow-card space-y-8">
         <div className="text-center space-y-3">
           <div className="flex justify-center">
             <SvgLogo className="w-14 h-14 bg-transparent" />
           </div>
-          <span className="text-xs uppercase tracking-widest text-[#8d6b4f] dark:text-[#d4a373] font-bold">
+          <span className="text-xs uppercase tracking-[0.14em] text-[#8d6b4f] dark:text-[#d4a373] font-bold">
             Welcome Back
           </span>
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold">
+          <h1 className="text-3xl sm:text-4xl font-serif font-medium">
             Login to <span className="text-[#2f4739] dark:text-[#489a69]">The Green Turtles</span>
           </h1>
-          <p className="text-sm text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-sm text-[#5e574d] dark:text-[#a49b8f]">
             Access your conscious shopping cart, eco-coin balance, and seller tools.
           </p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-5">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+            <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
               Email Address
             </label>
             <div className="relative">
@@ -120,7 +120,7 @@ const LoginPage = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3.5 pl-11 rounded-2xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium"
+                className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3.5 pl-11 rounded-2xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium"
                 placeholder="name@example.com"
                 required
               />
@@ -129,7 +129,7 @@ const LoginPage = () => {
 
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <label className="text-sm font-semibold text-[#111827] dark:text-[#f4f0ea]">
+              <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                 Password
               </label>
               <button
@@ -147,7 +147,7 @@ const LoginPage = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3.5 pl-11 rounded-2xl focus:border-[#2f4739] focus:outline-none text-[#111827] dark:text-[#f4f0ea] placeholder:text-[#9ca3af] transition text-sm font-medium"
+                className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3.5 pl-11 rounded-2xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] placeholder:text-[#a49b8f] transition text-sm font-medium"
                 placeholder="••••••••"
                 required
               />
@@ -156,8 +156,8 @@ const LoginPage = () => {
 
           {showForgotPassword && (
             <div className="rounded-2xl border border-[#e7e0d5] dark:border-[#2a3d33] bg-[#f7f4ee] dark:bg-[#161f1a] p-5 space-y-3 animate-in fade-in duration-300">
-              <h3 className="text-sm font-serif font-bold">Reset Password</h3>
-              <p className="text-xs text-[#4b5563] dark:text-[#9ca3af]">
+              <h3 className="text-sm font-serif font-medium">Reset Password</h3>
+              <p className="text-xs text-[#5e574d] dark:text-[#a49b8f]">
                 Enter your email address to receive instructions.
               </p>
               <input
@@ -172,14 +172,14 @@ const LoginPage = () => {
                   type="button"
                   onClick={handleForgotPassword}
                   disabled={isSendingReset}
-                  className="flex-1 bg-[#2f4739] text-[#faf7f2] font-semibold py-2 px-4 rounded-full text-xs hover:bg-[#23372c]"
+                  className="flex-1 bg-[#2f4739] text-[#f7f1e6] font-semibold py-2 px-4 rounded-lg text-xs hover:bg-[#23372c]"
                 >
                   {isSendingReset ? 'Sending...' : 'Send Link'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowForgotPassword(false)}
-                  className="px-4 py-2 rounded-full border text-xs text-[#6b7280]"
+                  className="px-4 py-2 rounded-lg border text-xs text-[#7a7268]"
                 >
                   Cancel
                 </button>
@@ -190,14 +190,14 @@ const LoginPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 px-6 rounded-full transition shadow-soft text-base active:scale-95 flex items-center justify-center gap-2"
+            className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 px-6 rounded-lg transition shadow-soft text-base active:scale-95 flex items-center justify-center gap-2"
           >
             {loading ? 'Logging in...' : 'Login'} <ArrowRight className="w-4 h-4" />
           </button>
         </form>
 
         <div className="text-center pt-2 border-t border-[#e7e0d5] dark:border-[#2a3d33]">
-          <p className="text-sm text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-sm text-[#5e574d] dark:text-[#a49b8f]">
             Don't have an account yet?{' '}
             <Link
               href="/register"

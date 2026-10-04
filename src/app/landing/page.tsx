@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
-  Sparkles,
+  Sprout,
   ArrowRight,
   ArrowDown,
   ArrowUp,
@@ -88,9 +88,9 @@ const LandingPage = () => {
   }, [activeSlide]);
 
   return (
-    <div className="relative h-screen h-[100dvh] w-screen overflow-hidden bg-[#faf7f2] dark:bg-[#121815] text-[#111827] dark:text-[#f4f0ea] selection:bg-[#2f4739]/20 selection:text-[#2f4739] transition-colors duration-200">
+    <div className="relative h-screen h-[100dvh] w-screen overflow-hidden text-[#1f1c18] dark:text-[#f4f0ea] selection:bg-[#2f4739]/20 selection:text-[#2f4739] transition-colors duration-200">
       {/* FLOATING PROJECTOR TOPBAR */}
-      <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between pointer-events-auto bg-gradient-to-b from-[#faf7f2]/90 dark:from-[#121815]/90 to-transparent backdrop-blur-xs">
+      <header className="absolute top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between pointer-events-auto bg-gradient-to-b from-[#f7f1e6]/90 dark:from-[#121815]/90 to-transparent backdrop-blur-xs">
         <button
           onClick={() => scrollToSlide(0)}
           className="flex items-center gap-3 hover:opacity-90 transition group"
@@ -99,7 +99,7 @@ const LandingPage = () => {
           <div className="bg-transparent shrink-0">
             <SvgLogo className="w-9 h-9 shrink-0 pointer-events-none" />
           </div>
-          <span className="font-serif text-2xl font-bold tracking-tight text-[#2f4739] dark:text-[#489a69]">
+          <span className="font-serif text-2xl font-medium tracking-tight text-[#2f4739] dark:text-[#489a69]">
             The Green Turtles
           </span>
         </button>
@@ -107,7 +107,7 @@ const LandingPage = () => {
         <div className="flex items-center gap-5 text-sm font-semibold">
           <Link
             href="/home"
-            className="hidden sm:flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition"
+            className="hidden sm:flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition"
           >
             Home
           </Link>
@@ -123,7 +123,7 @@ const LandingPage = () => {
 
           <button
             onClick={() => scrollToSlide(TOTAL_SLIDES - 1)}
-            className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold text-xs md:text-sm px-5 py-2.5 rounded-full shadow-soft transition active:scale-95 flex items-center gap-1.5"
+            className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-soft transition active:scale-95 flex items-center gap-1.5"
           >
             Explore Home <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -143,7 +143,7 @@ const LandingPage = () => {
               className={`text-[11px] font-mono font-bold transition-all ${
                 activeSlide === idx
                   ? 'text-[#2f4739] dark:text-[#489a69] opacity-100 scale-110'
-                  : 'text-[#9ca3af] opacity-0 group-hover:opacity-100'
+                  : 'text-[#a49b8f] opacity-0 group-hover:opacity-100'
               }`}
             >
               0{idx + 1}
@@ -174,7 +174,7 @@ const LandingPage = () => {
         {activeSlide < TOTAL_SLIDES - 1 ? (
           <button
             onClick={() => scrollToSlide(activeSlide + 1)}
-            className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold text-xs md:text-sm px-5 py-3 rounded-full shadow-card active:scale-95 transition"
+            className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold text-xs md:text-sm px-5 py-3 rounded-lg shadow-card active:scale-95 transition"
             title="Next Slide (Arrow Down or Space)"
           >
             <span>Next Slide</span>
@@ -183,7 +183,7 @@ const LandingPage = () => {
         ) : (
           <button
             onClick={() => router.push('/home')}
-            className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] text-[#faf7f2] font-semibold text-xs md:text-sm px-6 py-3 rounded-full shadow-card active:scale-95 transition"
+            className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] text-[#f7f1e6] font-semibold text-xs md:text-sm px-6 py-3 rounded-lg shadow-card active:scale-95 transition"
           >
             <span>Enter Marketplace</span>
             <ArrowRight className="w-4 h-4" />
@@ -198,9 +198,6 @@ const LandingPage = () => {
       >
         {/* SLIDE 1: HERO SCREEN */}
         <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden">
-          {/* Background Ambient Glows */}
-          <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[35rem] h-[35rem] bg-[#2f4739]/5 dark:bg-[#489a69]/10 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 w-[30rem] h-[30rem] bg-[#8d6b4f]/5 dark:bg-[#d4a373]/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl mx-auto space-y-6 animate-fade-in">
             {/* Transparent Logo Display */}
@@ -210,40 +207,40 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="inline-flex items-center gap-2 bg-[#2f4739]/10 dark:bg-[#489a69]/20 border border-[#2f4739]/20 dark:border-[#489a69]/40 px-4 py-2 rounded-full text-[#2f4739] dark:text-[#489a69] font-bold text-xs md:text-sm uppercase tracking-widest">
-              <Sparkles className="w-4 h-4" />
+            <div className="eyebrow">
+              <Sprout className="w-4 h-4" />
               Discover · Compare · Choose Better
             </div>
 
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-tight text-[#111827] dark:text-[#f4f0ea]">
-              The Green <span className="text-[#2f4739] dark:text-[#489a69] italic font-serif">Turtles</span>
+            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl font-medium tracking-tight leading-tight text-[#1f1c18] dark:text-[#f4f0ea]">
+              The Green <span className="scribble text-[#2f4739] dark:text-[#489a69] italic font-serif">Turtles</span>
             </h1>
 
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-[#2f4739] dark:text-[#489a69] max-w-3xl mx-auto">
               Making sustainable choices easier to discover.
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-[#374151] dark:text-[#d1d5db] max-w-2xl mx-auto font-normal leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-[#4a443c] dark:text-[#d8d0c3] max-w-2xl mx-auto font-normal leading-relaxed">
               A curated platform helping mindful shoppers discover, compare, and understand verified eco-friendly products from trusted and emerging brands.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <button
                 onClick={() => scrollToSlide(TOTAL_SLIDES - 1)}
-                className="w-full sm:w-auto bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 px-9 rounded-full shadow-soft hover:scale-[1.02] active:scale-95 transition text-base flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 px-9 rounded-lg shadow-soft active:scale-95 transition text-base flex items-center justify-center gap-2.5"
               >
-                Enter Marketplace <ArrowRight className="w-4 h-4 text-[#faf7f2]" />
+                Enter Marketplace <ArrowRight className="w-4 h-4 text-[#f7f1e6]" />
               </button>
 
               <button
                 onClick={() => scrollToSlide(4)}
-                className="w-full sm:w-auto bg-white dark:bg-[#1a241f] hover:bg-[#fcfaf7] dark:hover:bg-[#223028] text-[#111827] dark:text-[#f4f0ea] font-semibold py-4 px-9 rounded-full border border-[#cfc4b2] dark:border-[#354a3e] hover:border-[#2f4739] transition text-base shadow-soft"
+                className="w-full sm:w-auto bg-white dark:bg-[#1a241f] hover:bg-[#fcfaf7] dark:hover:bg-[#223028] text-[#1f1c18] dark:text-[#f4f0ea] font-semibold py-4 px-9 rounded-lg border border-[#cfc4b2] dark:border-[#354a3e] hover:border-[#2f4739] transition text-base shadow-soft"
               >
                 For Brands & Sellers
               </button>
             </div>
 
-            <p className="text-xs font-semibold text-[#6b7280] dark:text-[#9ca3af] uppercase tracking-widest pt-4">
+            <p className="text-xs font-semibold text-[#7a7268] dark:text-[#a49b8f] uppercase tracking-[0.14em] pt-4">
               Scroll down or press space to project next slide ↓
             </p>
           </div>
@@ -252,38 +249,38 @@ const LandingPage = () => {
         {/* SLIDE 2: OUR STORY / ORIGIN */}
         <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-white/50 dark:bg-[#161f1a]/50">
           <div className="relative z-10 max-w-4xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#f2ebe3] dark:bg-[#261f1a] px-4 py-2 rounded-full border border-[#e2d6c7] dark:border-[#423227] text-[#8d6b4f] dark:text-[#d4a373] font-bold text-xs uppercase tracking-widest">
+            <div className="eyebrow">
               <HeartHandshake className="w-4 h-4" /> 02 · Our Story
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#111827] dark:text-[#f4f0ea] leading-tight">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#1f1c18] dark:text-[#f4f0ea] leading-tight">
               The Green Turtle's Origin
             </h2>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-[#111827] dark:text-[#f4f0ea] font-medium leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#1f1c18] dark:text-[#f4f0ea] font-medium leading-relaxed max-w-3xl mx-auto">
               We started The Green Turtles with a simple observation: people want to make better choices, but finding products they can genuinely feel confident about is not easy.
             </p>
 
-            <div className="bg-[#f7f4ee] dark:bg-[#1c2620] border-l-4 border-[#2f4739] dark:border-[#489a69] p-8 rounded-r-3xl shadow-card max-w-3xl mx-auto text-left">
-              <p className="font-serif text-xl sm:text-2xl md:text-3xl text-[#111827] dark:text-[#f4f0ea] font-bold leading-snug">
-                "The problem isn't a shortage of solutions. It's knowing which ones are genuinely worth choosing."
+            <div className="bg-[#f7f4ee] dark:bg-[#1c2620] border-l-4 border-[#2f4739] dark:border-[#489a69] p-8 rounded-r-xl shadow-card max-w-3xl mx-auto text-left">
+              <p className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1f1c18] dark:text-[#f4f0ea] font-medium leading-snug">
+                “The problem isn't a shortage of solutions. It's knowing which ones are genuinely worth choosing.”
               </p>
             </div>
 
-            <p className="text-base sm:text-lg text-[#374151] dark:text-[#d1d5db] font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-[#4a443c] dark:text-[#d8d0c3] font-normal leading-relaxed max-w-2xl mx-auto">
               Countless products are labelled <span className="italic font-semibold text-[#2f4739] dark:text-[#489a69]">eco-friendly</span> or <span className="italic font-semibold text-[#2f4739] dark:text-[#489a69]">green</span> without proof. The Green Turtles brings sustainable products together and gives consumers clear information to discover, compare, and choose with total confidence.
             </p>
           </div>
         </section>
 
         {/* SLIDE 3: OUR UNIQUENESS */}
-        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-[#faf7f2] dark:bg-[#121815]">
+        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden">
           <div className="relative z-10 max-w-5xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#e8ede9] dark:bg-[#1f2b23] px-4 py-2 rounded-full border border-[#d2dfd5] dark:border-[#2f4739] text-[#2f4739] dark:text-[#489a69] font-bold text-xs uppercase tracking-widest">
+            <div className="eyebrow">
               <Recycle className="w-4 h-4" /> 03 · Our Uniqueness
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
               What Makes Us Different
             </h2>
 
@@ -292,28 +289,28 @@ const LandingPage = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 rounded-3xl shadow-card">
-                <h3 className="font-serif text-2xl font-bold text-[#111827] dark:text-[#f4f0ea] mb-3">
+              <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 rounded-xl shadow-card">
+                <h3 className="font-serif text-2xl font-medium text-[#1f1c18] dark:text-[#f4f0ea] mb-3">
                   The Decision Before The Purchase
                 </h3>
-                <p className="text-base sm:text-lg text-[#374151] dark:text-[#d1d5db] font-normal leading-relaxed">
+                <p className="text-base sm:text-lg text-[#4a443c] dark:text-[#d8d0c3] font-normal leading-relaxed">
                   Most marketplaces focus merely on pushing sales. We focus on making the decision before the purchase transparent, verified, and effortless.
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 rounded-3xl shadow-card">
-                <h3 className="font-serif text-2xl font-bold text-[#111827] dark:text-[#f4f0ea] mb-3">
+              <div className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 rounded-xl shadow-card">
+                <h3 className="font-serif text-2xl font-medium text-[#1f1c18] dark:text-[#f4f0ea] mb-3">
                   Information Behind The Choice
                 </h3>
-                <p className="text-base sm:text-lg text-[#374151] dark:text-[#d1d5db] font-normal leading-relaxed">
+                <p className="text-base sm:text-lg text-[#4a443c] dark:text-[#d8d0c3] font-normal leading-relaxed">
                   We bring materials, supply chain ethics, certifications, and carbon footprint comparisons together so you choose based on real evidence rather than marketing claims.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#f4efe6] dark:bg-[#1c2620] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-3xl p-6 max-w-3xl mx-auto">
+            <div className="bg-[#f4efe6] dark:bg-[#1c2620] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-xl p-6 max-w-3xl mx-auto">
               <p className="font-serif text-lg sm:text-xl text-[#2f4739] dark:text-[#489a69] font-semibold">
-                "You don't have to simply trust our taste. You get to see the data and story behind each product."
+                “You don't have to simply trust our taste. You get to see the data and story behind each product.”
               </p>
             </div>
           </div>
@@ -322,11 +319,11 @@ const LandingPage = () => {
         {/* SLIDE 4: HOW WE REVIEW PRODUCTS */}
         <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-white/60 dark:bg-[#161f1a]/60">
           <div className="relative z-10 max-w-5xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#e8ede9] dark:bg-[#1f2b23] px-4 py-2 rounded-full border border-[#d2dfd5] dark:border-[#2f4739] text-[#2f4739] dark:text-[#489a69] font-bold text-xs uppercase tracking-widest">
+            <div className="eyebrow">
               <ShieldCheck className="w-4 h-4" /> 04 · Trust-First Approach
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
               How We Review Products
             </h2>
 
@@ -350,37 +347,37 @@ const LandingPage = () => {
                   <div className="p-2 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-xl shrink-0">
                     <CheckCircle className="w-4 h-4" />
                   </div>
-                  <span className="font-semibold text-base text-[#111827] dark:text-[#f4f0ea]">
+                  <span className="font-semibold text-base text-[#1f1c18] dark:text-[#f4f0ea]">
                     {criterion}
                   </span>
                 </div>
               ))}
             </div>
 
-            <p className="text-sm md:text-base text-[#4b5563] dark:text-[#9ca3af] italic max-w-2xl mx-auto">
-              "We are not here to claim any product is magically flawless. Our goal is to make the information behind every sustainable choice transparent."
+            <p className="text-sm md:text-base text-[#5e574d] dark:text-[#a49b8f] italic max-w-2xl mx-auto">
+              “We are not here to claim any product is magically flawless. Our goal is to make the information behind every sustainable choice transparent.”
             </p>
           </div>
         </section>
 
         {/* SLIDE 5: FOR BRANDS & ECOSYSTEM (With Link to Why Partner Us Standalone Page) */}
-        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-[#faf7f2] dark:bg-[#121815]">
+        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden">
           <div className="relative z-10 max-w-4xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#f2ebe3] dark:bg-[#261f1a] px-4 py-2 rounded-full border border-[#e2d6c7] dark:border-[#423227] text-[#8d6b4f] dark:text-[#d4a373] font-bold text-xs uppercase tracking-widest">
+            <div className="eyebrow">
               <Leaf className="w-4 h-4" /> 05 · For Brands & Sellers
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
               Have a Sustainable Product Worth Discovering?
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#374151] dark:text-[#d1d5db] max-w-2xl mx-auto font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#4a443c] dark:text-[#d8d0c3] max-w-2xl mx-auto font-normal leading-relaxed">
               The Green Turtles gives ethical brands a structured, dedicated platform to showcase products, verify sustainability credentials, and connect directly with mindful consumers.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 text-sm font-bold text-[#2f4739] dark:text-[#489a69]">
               {["Reach Intent Shoppers", "Zero Greenwashing Clutter", "Audience Insights", "Verified Trust Seal"].map((tag, idx) => (
-                <span key={idx} className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] px-5 py-2.5 rounded-full shadow-xs">
+                <span key={idx} className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] px-5 py-2.5 rounded-lg shadow-xs">
                   • {tag}
                 </span>
               ))}
@@ -390,14 +387,14 @@ const LandingPage = () => {
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/why-partner-us"
-                className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 px-9 rounded-full shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2.5"
+                className="bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 px-9 rounded-lg shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2.5"
               >
                 Explore Why Partner With Us <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
                 href="/seller-home"
-                className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#354a3e] text-[#111827] dark:text-[#f4f0ea] hover:border-[#2f4739] font-semibold py-4 px-9 rounded-full transition active:scale-95 text-base shadow-soft"
+                className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#354a3e] text-[#1f1c18] dark:text-[#f4f0ea] hover:border-[#2f4739] font-semibold py-4 px-9 rounded-lg transition active:scale-95 text-base shadow-soft"
               >
                 Go to Seller Home
               </Link>
@@ -406,32 +403,32 @@ const LandingPage = () => {
         </section>
 
         {/* SLIDE 6: THE HOME PAGE SNAP (Full-View Snapping Destination) */}
-        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-gradient-to-br from-[#f7f4ee] via-[#faf7f2] to-[#e8ede9] dark:from-[#1b2620] dark:via-[#161f1a] dark:to-[#121815]">
+        <section className="h-screen h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden bg-[#f1e9dc] dark:bg-[#18211c]">
           <div className="relative z-10 max-w-5xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#2f4739]/10 dark:bg-[#489a69]/20 border border-[#2f4739]/20 dark:border-[#489a69]/40 px-4 py-2 rounded-full text-[#2f4739] dark:text-[#489a69] font-bold text-xs uppercase tracking-widest">
-              <Sparkles className="w-4 h-4" /> 06 · Welcome Home
+            <div className="eyebrow">
+              <Sprout className="w-4 h-4" /> 06 · Welcome Home
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-[#111827] dark:text-[#f4f0ea] tracking-tight leading-tight">
+            <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium text-[#1f1c18] dark:text-[#f4f0ea] tracking-tight leading-tight">
               Enter The <span className="text-[#2f4739] dark:text-[#489a69] italic font-serif">Green Turtles</span> Experience
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#374151] dark:text-[#d1d5db] max-w-2xl mx-auto font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#4a443c] dark:text-[#d8d0c3] max-w-2xl mx-auto font-normal leading-relaxed">
               Your journey starts here. Choose your destination to discover verified sustainable goods or grow your ethical brand.
             </p>
 
             {/* TWO LARGE SNAP CARDS: BUYER HOME & SELLER HOME */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto pt-2">
               {/* Buyer Home Portal Card */}
-              <div className="bg-white dark:bg-[#1a241f] border-2 border-[#2f4739]/30 dark:border-[#489a69]/40 p-8 md:p-10 rounded-[2.5rem] shadow-card hover:shadow-hover hover:border-[#2f4739] dark:hover:border-[#489a69] transition duration-300 flex flex-col justify-between group">
+              <div className="bg-white dark:bg-[#1a241f] border border-[#2f4739]/30 dark:border-[#489a69]/40 p-8 md:p-10 rounded-2xl shadow-card hover:shadow-hover hover:border-[#2f4739] dark:hover:border-[#489a69] transition duration-300 flex flex-col justify-between group">
                 <div className="space-y-4">
-                  <div className="p-4 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-2xl w-fit group-hover:scale-110 transition-transform">
+                  <div className="p-4 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-2xl w-fit">
                     <ShoppingBag className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+                  <h3 className="font-serif text-3xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                     Buyer Marketplace
                   </h3>
-                  <p className="text-base text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+                  <p className="text-base text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                     Shop vetted eco-goods across fashion, living, and wellness. Earn Eco-Coins on every purchase and track your carbon savings.
                   </p>
                 </div>
@@ -439,7 +436,7 @@ const LandingPage = () => {
                 <div className="pt-6">
                   <button
                     onClick={() => router.push('/home')}
-                    className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] font-semibold py-4 px-6 rounded-full shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
+                    className="w-full bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] font-semibold py-4 px-6 rounded-lg shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
                   >
                     Enter Buyer Home <ArrowRight className="w-4 h-4" />
                   </button>
@@ -447,15 +444,15 @@ const LandingPage = () => {
               </div>
 
               {/* Seller Home Portal Card */}
-              <div className="bg-white dark:bg-[#1a241f] border-2 border-[#8d6b4f]/30 dark:border-[#d4a373]/40 p-8 md:p-10 rounded-[2.5rem] shadow-card hover:shadow-hover hover:border-[#8d6b4f] dark:hover:border-[#d4a373] transition duration-300 flex flex-col justify-between group">
+              <div className="bg-white dark:bg-[#1a241f] border border-[#8d6b4f]/30 dark:border-[#d4a373]/40 p-8 md:p-10 rounded-2xl shadow-card hover:shadow-hover hover:border-[#8d6b4f] dark:hover:border-[#d4a373] transition duration-300 flex flex-col justify-between group">
                 <div className="space-y-4">
-                  <div className="p-4 bg-[#f2ebe3] dark:bg-[#281e18] text-[#8d6b4f] dark:text-[#d4a373] rounded-2xl w-fit group-hover:scale-110 transition-transform">
+                  <div className="p-4 bg-[#f2ebe3] dark:bg-[#281e18] text-[#8d6b4f] dark:text-[#d4a373] rounded-2xl w-fit">
                     <Store className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl font-bold text-[#111827] dark:text-[#f4f0ea]">
+                  <h3 className="font-serif text-3xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                     Seller & Brand Hub
                   </h3>
-                  <p className="text-base text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+                  <p className="text-base text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                     Join our collective of certified eco-brands. Access transparent fee structures, inventory management, and high-intent buyers.
                   </p>
                 </div>
@@ -463,7 +460,7 @@ const LandingPage = () => {
                 <div className="pt-6">
                   <button
                     onClick={() => router.push('/seller-home')}
-                    className="w-full bg-[#8d6b4f] hover:bg-[#6e5038] text-[#faf7f2] font-semibold py-4 px-6 rounded-full shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
+                    className="w-full bg-[#8d6b4f] hover:bg-[#6e5038] text-[#f7f1e6] font-semibold py-4 px-6 rounded-lg shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
                   >
                     Enter Seller Home <ArrowRight className="w-4 h-4" />
                   </button>
@@ -472,7 +469,7 @@ const LandingPage = () => {
             </div>
 
             {/* Quick Links in Snap footer */}
-            <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm font-semibold text-[#4b5563] dark:text-[#9ca3af]">
+            <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm font-semibold text-[#5e574d] dark:text-[#a49b8f]">
               <Link href="/why-partner-us" className="hover:text-[#2f4739] dark:hover:text-[#489a69] underline underline-offset-4">
                 Why Partner With Us
               </Link>

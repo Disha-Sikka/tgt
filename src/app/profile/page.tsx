@@ -34,53 +34,53 @@ const ProfilePage = () => {
 
   return (
     <div className="max-w-xl mx-auto py-12 px-4">
-      <div className="bg-white rounded-3xl border border-[#ede4d5] shadow-sm overflow-hidden">
-        <div className="bg-[#2f4739] p-8 md:p-10 text-center text-[#faf7f2] relative overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#ede4d5] shadow-sm overflow-hidden">
+        <div className="bg-[#2f4739] p-8 md:p-10 text-center text-[#f7f1e6] relative overflow-hidden">
           <div className="relative z-10">
             <div className="inline-block p-4 bg-white/10 rounded-2xl backdrop-blur-md mb-4 border border-white/20">
-              <User size={40} className="text-[#faf7f2]" />
+              <User size={40} className="text-[#f7f1e6]" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-1">My Profile</h2>
-            <p className="text-xs text-[#faf7f2]/80 font-medium">{user?.email}</p>
+            <h2 className="text-2xl md:text-3xl font-serif font-medium mb-1">My Profile</h2>
+            <p className="text-xs text-[#f7f1e6]/80 font-medium">{user?.email}</p>
           </div>
         </div>
 
         <form onSubmit={handleUpdate} className="p-8 md:p-10 space-y-6">
           <div className="space-y-1.5">
-            <label className="flex items-center text-xs font-semibold text-[#1c1917]">
+            <label className="flex items-center text-xs font-semibold text-[#1f1c18]">
               <User size={14} className="mr-2 text-[#2f4739]" /> Full Name
             </label>
             <input
               type="text"
               value={formData.full_name}
               onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-              className="w-full px-4 py-2.5 bg-[#faf7f2] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] placeholder:text-[#a8a29e] transition text-sm"
+              className="w-full px-4 py-2.5 bg-[#f7f1e6] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] placeholder:text-[#a8a29e] transition text-sm"
               placeholder="Your full name"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="flex items-center text-xs font-semibold text-[#1c1917]">
+            <label className="flex items-center text-xs font-semibold text-[#1f1c18]">
               <Phone size={14} className="mr-2 text-[#2f4739]" /> Phone Number
             </label>
             <input
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-4 py-2.5 bg-[#faf7f2] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] placeholder:text-[#a8a29e] transition text-sm"
+              className="w-full px-4 py-2.5 bg-[#f7f1e6] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] placeholder:text-[#a8a29e] transition text-sm"
               placeholder="+91 XXXXX XXXXX"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="flex items-center text-xs font-semibold text-[#1c1917]">
+            <label className="flex items-center text-xs font-semibold text-[#1f1c18]">
               <MapPin size={14} className="mr-2 text-[#2f4739]" /> Delivery Address
             </label>
             <textarea
               rows={3}
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className="w-full px-4 py-2.5 bg-[#faf7f2] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] placeholder:text-[#a8a29e] transition resize-none text-sm"
+              className="w-full px-4 py-2.5 bg-[#f7f1e6] border border-[#ede4d5] rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] placeholder:text-[#a8a29e] transition resize-none text-sm"
               placeholder="Where should we send your eco-friendly items?"
             />
           </div>
@@ -88,10 +88,10 @@ const ProfilePage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#2f4739] text-[#faf7f2] py-3.5 rounded-full font-semibold shadow-sm hover:bg-[#23372c] transition flex items-center justify-center space-x-2 text-sm"
+            className="w-full bg-[#2f4739] text-[#f7f1e6] py-3.5 rounded-lg font-semibold shadow-sm hover:bg-[#23372c] transition flex items-center justify-center space-x-2 text-sm"
           >
             {loading ? (
-              <div className="w-5 h-5 border-2 border-[#faf7f2]/30 border-t-[#faf7f2] rounded-full animate-spin"></div>
+              <div className="w-5 h-5 border-2 border-[#f7f1e6]/30 border-t-[#f7f1e6] rounded-full animate-spin"></div>
             ) : (
               <><Save size={18} /> <span>Save Changes</span></>
             )}

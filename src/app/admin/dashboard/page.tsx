@@ -139,10 +139,10 @@ const AdminDashboardPage = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 text-[#1c1917] relative">
+    <div className="max-w-7xl mx-auto px-4 py-12 text-[#1f1c18] relative">
       <div className="mb-10 space-y-1">
         <span className="text-xs uppercase tracking-wider text-[#8d6b4f] font-semibold">Management Console</span>
-        <h1 className="text-3xl md:text-4xl font-serif font-bold flex items-center gap-3 text-[#1c1917]">
+        <h1 className="text-3xl md:text-4xl font-serif font-medium flex items-center gap-3 text-[#1f1c18]">
           <ShieldCheck className="text-[#2f4739] w-8 h-8" />
           Admin <span className="text-[#2f4739]">Panel</span>
         </h1>
@@ -152,9 +152,9 @@ const AdminDashboardPage = () => {
       {loading ? (
         <div className="text-center text-[#66615b] py-12 text-sm">Loading products...</div>
       ) : products.length === 0 ? (
-        <div className="text-center text-[#66615b] py-12 bg-white border border-[#ede4d5] rounded-3xl text-sm">No products found.</div>
+        <div className="text-center text-[#66615b] py-12 bg-white border border-[#ede4d5] rounded-xl text-sm">No products found.</div>
       ) : (
-        <div className="overflow-x-auto bg-white border border-[#ede4d5] rounded-3xl p-6 shadow-sm">
+        <div className="overflow-x-auto bg-white border border-[#ede4d5] rounded-xl p-6 shadow-sm">
           <table className="w-full text-left">
             <thead>
               <tr className="border-b border-[#ede4d5] text-[#66615b]">
@@ -168,7 +168,7 @@ const AdminDashboardPage = () => {
             </thead>
             <tbody>
               {products.map(product => (
-                <tr key={product.id} className="border-b border-[#ede4d5]/60 hover:bg-[#faf7f2]/60 transition">
+                <tr key={product.id} className="border-b border-[#ede4d5]/60 hover:bg-[#f7f1e6]/60 transition">
                   <td className="py-3.5 px-4 flex items-center gap-3">
                     <img 
                       src={product.imageUrl || product.image_url || 'https://via.placeholder.com/50'} 
@@ -180,20 +180,20 @@ const AdminDashboardPage = () => {
                       }}
                     />
                     <div>
-                      <p className="font-serif font-bold text-sm text-[#1c1917]">{product.name}</p>
+                      <p className="font-serif font-medium text-sm text-[#1f1c18]">{product.name}</p>
                       <p className="text-xs text-[#66615b]">{product.category}</p>
                     </div>
                   </td>
-                  <td className="py-3.5 px-4 font-semibold text-sm text-[#1c1917]">Rs. {product.price}</td>
+                  <td className="py-3.5 px-4 font-semibold text-sm text-[#1f1c18]">Rs. {product.price}</td>
                   <td className="py-3.5 px-4 text-xs font-medium text-[#66615b]">
-                    <p>Mat: <span className="text-[#1c1917]">{product.material_used || 'N/A'}</span></p>
-                    <p>Wt: <span className="text-[#1c1917]">{product.weight || 'N/A'}</span></p>
+                    <p>Mat: <span className="text-[#1f1c18]">{product.material_used || 'N/A'}</span></p>
+                    <p>Wt: <span className="text-[#1f1c18]">{product.weight || 'N/A'}</span></p>
                   </td>
                   <td className="py-3.5 px-4">
                     {product.is_verified ? (
-                      <span className="inline-flex items-center gap-1 bg-[#2f4739]/10 text-[#2f4739] px-2.5 py-1 rounded-full text-xs font-semibold border border-[#2f4739]/20"><CheckCircle className="w-3.5 h-3.5"/> Verified</span>
+                      <span className="inline-flex items-center gap-1 bg-[#2f4739]/10 text-[#2f4739] px-2.5 py-1 rounded-lg text-xs font-semibold border border-[#2f4739]/20"><CheckCircle className="w-3.5 h-3.5"/> Verified</span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 bg-[#f7f4ee] text-[#8d6b4f] px-2.5 py-1 rounded-full text-xs font-semibold border border-[#ede4d5]"><XCircle className="w-3.5 h-3.5"/> Pending</span>
+                      <span className="inline-flex items-center gap-1 bg-[#f7f4ee] text-[#8d6b4f] px-2.5 py-1 rounded-lg text-xs font-semibold border border-[#ede4d5]"><XCircle className="w-3.5 h-3.5"/> Pending</span>
                     )}
                   </td>
                   <td className="py-3.5 px-4">
@@ -202,7 +202,7 @@ const AdminDashboardPage = () => {
                     ) : (
                       <input 
                         type="number"
-                        className="w-24 bg-[#faf7f2] border border-[#ede4d5] p-1.5 rounded-lg focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                        className="w-24 bg-[#f7f1e6] border border-[#ede4d5] p-1.5 rounded-lg focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                         placeholder={String(product.price)}
                         value={adminPrices[product.id] ?? ''}
                         onChange={(e) => handlePriceChange(product.id, e.target.value)}
@@ -213,7 +213,7 @@ const AdminDashboardPage = () => {
                     <div className="flex items-center justify-center gap-2">
                       <button 
                         onClick={() => handleOpenEdit(product)}
-                        className="bg-[#f7f4ee] hover:bg-[#ede4d5]/60 text-[#1c1917] p-2 rounded-xl text-xs font-medium transition flex items-center gap-1.5 border border-[#ede4d5]"
+                        className="bg-[#f7f4ee] hover:bg-[#ede4d5]/60 text-[#1f1c18] p-2 rounded-xl text-xs font-medium transition flex items-center gap-1.5 border border-[#ede4d5]"
                         title="Edit details"
                       >
                         <Edit3 className="w-3.5 h-3.5 text-[#2f4739]" />
@@ -223,7 +223,7 @@ const AdminDashboardPage = () => {
                       {!product.is_verified ? (
                         <button 
                           onClick={() => handleVerify(product)}
-                          className="bg-[#2f4739] hover:bg-[#23372c] text-[#faf7f2] px-3.5 py-1.5 rounded-full text-xs font-semibold transition shadow-xs flex items-center gap-1"
+                          className="bg-[#2f4739] hover:bg-[#23372c] text-[#f7f1e6] px-3.5 py-1.5 rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1"
                         >
                           Verify
                         </button>
@@ -247,18 +247,18 @@ const AdminDashboardPage = () => {
 
       {/* Edit/Verification Modal */}
       {editingProduct && (
-        <div className="fixed inset-0 bg-[#1c1917]/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-200">
-          <div className="bg-white border border-[#ede4d5] rounded-3xl max-w-2xl w-full p-8 shadow-xl relative animate-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 bg-[#1f1c18]/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-200">
+          <div className="bg-white border border-[#ede4d5] rounded-xl max-w-2xl w-full p-8 shadow-xl relative animate-in zoom-in-95 duration-200">
             <button 
               onClick={() => setEditingProduct(null)}
-              className="absolute top-6 right-6 p-2 rounded-full hover:bg-[#f7f4ee] text-[#66615b] hover:text-[#1c1917] transition"
+              className="absolute top-6 right-6 p-2 rounded-full hover:bg-[#f7f4ee] text-[#66615b] hover:text-[#1f1c18] transition"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="space-y-1 mb-6">
               <span className="text-xs uppercase tracking-wider text-[#8d6b4f] font-semibold">Moderation</span>
-              <h3 className="text-2xl font-serif font-bold text-[#1c1917] flex items-center gap-2">
+              <h3 className="text-2xl font-serif font-medium text-[#1f1c18] flex items-center gap-2">
                 <Edit3 className="text-[#2f4739] w-5 h-5" /> 
                 Review & Edit Product
               </h3>
@@ -268,54 +268,54 @@ const AdminDashboardPage = () => {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Product Name</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Product Name</label>
                   <input
                     type="text"
                     value={editForm.name}
                     onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Category</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Category</label>
                   <input
                     type="text"
                     value={editForm.category}
                     onChange={(e) => setEditForm({ ...editForm, category: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Material Used</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Material Used</label>
                   <input
                     type="text"
                     value={editForm.material_used}
                     onChange={(e) => setEditForm({ ...editForm, material_used: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Weight</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Weight</label>
                   <input
                     type="text"
                     value={editForm.weight}
                     onChange={(e) => setEditForm({ ...editForm, weight: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Seller Price (Rs.)</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Seller Price (Rs.)</label>
                   <input
                     type="number"
                     value={editForm.price}
                     onChange={(e) => setEditForm({ ...editForm, price: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
                 <div className="space-y-1">
@@ -324,50 +324,50 @@ const AdminDashboardPage = () => {
                     type="number"
                     value={editForm.admin_price}
                     onChange={(e) => setEditForm({ ...editForm, admin_price: e.target.value })}
-                    className="w-full bg-[#f7f4ee] border border-[#2f4739]/40 px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917] font-semibold"
+                    className="w-full bg-[#f7f4ee] border border-[#2f4739]/40 px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18] font-semibold"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#1c1917]">Stock Count</label>
+                  <label className="text-xs font-semibold text-[#1f1c18]">Stock Count</label>
                   <input
                     type="number"
                     value={editForm.numberOfItem}
                     onChange={(e) => setEditForm({ ...editForm, numberOfItem: e.target.value })}
-                    className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                    className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-[#1c1917]">Image URL</label>
+                <label className="text-xs font-semibold text-[#1f1c18]">Image URL</label>
                 <input
                   type="url"
                   value={editForm.imageUrl}
                   onChange={(e) => setEditForm({ ...editForm, imageUrl: e.target.value })}
-                  className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917]"
+                  className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18]"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-[#1c1917]">Description</label>
+                <label className="text-xs font-semibold text-[#1f1c18]">Description</label>
                 <textarea
                   value={editForm.description}
                   onChange={(e) => setEditForm({ ...editForm, description: e.target.value })}
-                  className="w-full bg-[#faf7f2] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1c1917] h-20 resize-none"
+                  className="w-full bg-[#f7f1e6] border border-[#ede4d5] px-3 py-2 rounded-xl focus:border-[#2f4739] focus:outline-none text-xs text-[#1f1c18] h-20 resize-none"
                 />
               </div>
 
               <div className="pt-3 flex gap-3">
                 <button
                   onClick={() => handleSaveChanges(false)}
-                  className="flex-1 bg-[#f7f4ee] border border-[#ede4d5] hover:bg-[#ede4d5]/60 text-[#1c1917] py-2.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-xs"
+                  className="flex-1 bg-[#f7f4ee] border border-[#ede4d5] hover:bg-[#ede4d5]/60 text-[#1f1c18] py-2.5 rounded-lg font-semibold transition flex items-center justify-center gap-2 text-xs"
                 >
                   <Save className="w-4 h-4 text-[#8d6b4f]" />
                   Save Changes
                 </button>
                 <button
                   onClick={() => handleSaveChanges(true)}
-                  className="flex-1 bg-[#2f4739] hover:bg-[#23372c] text-[#faf7f2] py-2.5 rounded-full font-semibold shadow-sm transition flex items-center justify-center gap-2 text-xs"
+                  className="flex-1 bg-[#2f4739] hover:bg-[#23372c] text-[#f7f1e6] py-2.5 rounded-lg font-semibold shadow-sm transition flex items-center justify-center gap-2 text-xs"
                 >
                   <CheckCircle className="w-4 h-4" />
                   Approve & Launch

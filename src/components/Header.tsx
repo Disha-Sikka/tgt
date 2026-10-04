@@ -86,7 +86,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
   };
 
   return (
-    <header className="bg-[#faf7f2]/95 dark:bg-[#121815]/95 backdrop-blur-md border-b border-[#e7e0d5] dark:border-[#2a3d33] py-3.5 sticky top-0 z-50 transition-colors duration-200">
+    <header className="bg-[#f7f1e6]/95 dark:bg-[#121815]/95 backdrop-blur-md border-b border-[#e7e0d5] dark:border-[#2a3d33] py-3.5 sticky top-0 z-50 transition-colors duration-200">
       <nav className="container mx-auto px-4 flex justify-between items-center">
         {/* LOGO: Clean, Completely Transparent Background, No Box */}
         <button
@@ -105,7 +105,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
           <div className="shrink-0 bg-transparent flex items-center justify-center">
             <SvgLogo className="w-10 h-10 shrink-0 pointer-events-none drop-shadow-xs" />
           </div>
-          <span className="font-serif text-2xl font-bold tracking-tight text-[#2f4739] dark:text-[#489a69] group-hover:underline decoration-1 underline-offset-4">
+          <span className="font-serif text-2xl font-medium tracking-tight text-[#2f4739] dark:text-[#489a69] group-hover:underline decoration-1 underline-offset-4">
             The Green Turtles
           </span>
         </button>
@@ -117,7 +117,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
               {isAdmin && (
                 <button
                   onClick={() => goTo('admin/dashboard')}
-                  className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                  className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                 >
                   <ShieldCheck className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Admin Panel
                 </button>
@@ -128,21 +128,21 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
                 <>
                   <button
                     onClick={() => goTo('seller-home')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Home className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Home
                   </button>
 
                   <button
                     onClick={() => goTo('why-partner-us')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Handshake className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Why Partner Us
                   </button>
 
                   <button
                     onClick={() => goTo('products')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Products
                   </button>
@@ -150,7 +150,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
                   {isSeller && (
                     <button
                       onClick={() => goTo('seller-dashboard')}
-                      className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                      className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                     >
                       <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Dashboard
                     </button>
@@ -161,47 +161,47 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
                 <>
                   <button
                     onClick={() => goTo('home')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Home className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Home
                   </button>
 
                   <button
                     onClick={() => goTo('products')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Products
                   </button>
 
                   <button
                     onClick={() => goTo('about')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Info className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> About
                   </button>
 
                   <button
                     onClick={() => goTo('contact')}
-                    className="flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <Phone className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Contact
                   </button>
 
                   <button
                     onClick={() => goTo('cart')}
-                    className="relative flex items-center gap-1.5 text-[#111827] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
+                    className="relative flex items-center gap-1.5 text-[#1f1c18] dark:text-[#f4f0ea] hover:text-[#2f4739] dark:hover:text-[#489a69] transition-colors"
                   >
                     <ShoppingCart className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" />
                     Cart
                     {cartItemCount > 0 && (
-                      <span className="absolute -top-2 -right-3 bg-[#2f4739] dark:bg-[#489a69] text-[#faf7f2] text-[11px] font-bold rounded-full h-4.5 w-4.5 flex items-center justify-center shadow-xs">
+                      <span className="absolute -top-2 -right-3 bg-[#2f4739] dark:bg-[#489a69] text-[#f7f1e6] text-[11px] font-bold rounded-full h-4.5 w-4.5 flex items-center justify-center shadow-xs">
                         {cartItemCount}
                       </span>
                     )}
                   </button>
 
                   {user && role === 'buyer' && (
-                    <div className="flex items-center gap-1.5 text-[#2f4739] dark:text-[#489a69] font-bold text-xs bg-[#e8ede9] dark:bg-[#1a2c21] px-3 py-1.5 rounded-full border border-[#d2dfd5] dark:border-[#2f4739]">
+                    <div className="flex items-center gap-1.5 text-[#2f4739] dark:text-[#489a69] font-bold text-xs bg-[#e8ede9] dark:bg-[#1a2c21] px-3 py-1.5 rounded-lg border border-[#d2dfd5] dark:border-[#2f4739]">
                       <Leaf className="w-3.5 h-3.5" /> {ecoCoins} Coins
                     </div>
                   )}
@@ -226,7 +226,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
               {!user ? (
                 <button
                   onClick={() => goTo('login')}
-                  className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#faf7f2] px-6 py-2.5 rounded-full transition shadow-soft font-semibold text-sm active:scale-95"
+                  className="flex items-center gap-2 bg-[#2f4739] hover:bg-[#23372c] dark:bg-[#346244] dark:hover:bg-[#3e7552] text-[#f7f1e6] px-6 py-2.5 rounded-lg transition shadow-soft font-semibold text-sm active:scale-95"
                 >
                   <User className="w-4 h-4" /> Login
                 </button>
@@ -234,16 +234,16 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
                 <div className="relative" ref={profileRef}>
                   <button
                     onClick={() => setIsProfileOpen(!isProfileOpen)}
-                    className="flex items-center gap-2.5 bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-2 rounded-full hover:border-[#2f4739] transition-colors shadow-xs"
+                    className="flex items-center gap-2.5 bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-2 rounded-lg hover:border-[#2f4739] transition-colors shadow-xs"
                   >
                     <div className="bg-[#e8ede9] dark:bg-[#223028] p-1 rounded-full">
                       <User className="w-3.5 h-3.5 text-[#2f4739] dark:text-[#489a69]" />
                     </div>
-                    <span className="text-xs font-bold text-[#111827] dark:text-[#f4f0ea]">
+                    <span className="text-xs font-bold text-[#1f1c18] dark:text-[#f4f0ea]">
                       {user.email?.split('@')[0]}
                     </span>
                     <ChevronDown
-                      className={`w-3.5 h-3.5 text-[#6b7280] transition-transform ${
+                      className={`w-3.5 h-3.5 text-[#7a7268] transition-transform ${
                         isProfileOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -254,9 +254,9 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
                       {!isAdmin && (
                         <button
                           onClick={() => goTo('profile')}
-                          className="w-full text-left flex items-center px-4 py-2.5 text-sm font-medium text-[#111827] dark:text-[#f4f0ea] hover:bg-[#f7f4ee] dark:hover:bg-[#223028] rounded-xl transition-colors"
+                          className="w-full text-left flex items-center px-4 py-2.5 text-sm font-medium text-[#1f1c18] dark:text-[#f4f0ea] hover:bg-[#f7f4ee] dark:hover:bg-[#223028] rounded-xl transition-colors"
                         >
-                          <Settings className="w-4 h-4 mr-3 text-[#6b7280]" />
+                          <Settings className="w-4 h-4 mr-3 text-[#7a7268]" />
                           Profile Settings
                         </button>
                       )}
@@ -288,7 +288,7 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-xl bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] text-[#111827] dark:text-[#f4f0ea]"
+            className="p-2 rounded-xl bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] text-[#1f1c18] dark:text-[#f4f0ea]"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -298,32 +298,32 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
 
       {/* MOBILE DROPDOWN MENU */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-[#e7e0d5] dark:border-[#2a3d33] bg-[#faf7f2] dark:bg-[#121815] px-6 py-6 space-y-3 shadow-xl">
+        <div className="md:hidden border-t border-[#e7e0d5] dark:border-[#2a3d33] bg-[#f7f1e6] dark:bg-[#121815] px-6 py-6 space-y-3 shadow-xl">
           <div className="space-y-2 text-base font-semibold">
             {isSellerView ? (
               <>
                 <button
                   onClick={() => goTo('seller-home')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Home className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Home
                 </button>
                 <button
                   onClick={() => goTo('why-partner-us')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Handshake className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Why Partner Us
                 </button>
                 <button
                   onClick={() => goTo('products')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Products
                 </button>
                 {isSeller && (
                   <button
                     onClick={() => goTo('seller-dashboard')}
-                    className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                    className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                   >
                     <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Dashboard
                   </button>
@@ -333,37 +333,37 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
               <>
                 <button
                   onClick={() => goTo('home')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Home className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Home
                 </button>
                 <button
                   onClick={() => goTo('products')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Package className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Products
                 </button>
                 <button
                   onClick={() => goTo('about')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Info className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> About
                 </button>
                 <button
                   onClick={() => goTo('contact')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center gap-2"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Contact
                 </button>
                 <button
                   onClick={() => goTo('cart')}
-                  className="w-full text-left py-2 text-[#111827] dark:text-[#f4f0ea] flex items-center justify-between"
+                  className="w-full text-left py-2 text-[#1f1c18] dark:text-[#f4f0ea] flex items-center justify-between"
                 >
                   <span className="flex items-center gap-2">
                     <ShoppingCart className="w-4 h-4 text-[#2f4739] dark:text-[#489a69]" /> Cart
                   </span>
                   {cartItemCount > 0 && (
-                    <span className="bg-[#2f4739] text-white px-2 py-0.5 rounded-full text-xs font-bold">
+                    <span className="bg-[#2f4739] text-white px-2 py-0.5 rounded-lg text-xs font-bold">
                       {cartItemCount}
                     </span>
                   )}
@@ -376,14 +376,14 @@ const Header = ({ isComingSoon, isSubscriptionPage }: HeaderProps) => {
             {!user ? (
               <button
                 onClick={() => goTo('login')}
-                className="w-full bg-[#2f4739] hover:bg-[#23372c] text-[#faf7f2] py-3 rounded-full font-semibold text-center"
+                className="w-full bg-[#2f4739] hover:bg-[#23372c] text-[#f7f1e6] py-3 rounded-lg font-semibold text-center"
               >
                 Login to Account
               </button>
             ) : (
               <button
                 onClick={handleLogout}
-                className="w-full bg-[#a74338] text-white py-3 rounded-full font-semibold text-center"
+                className="w-full bg-[#a74338] text-white py-3 rounded-lg font-semibold text-center"
               >
                 Logout
               </button>

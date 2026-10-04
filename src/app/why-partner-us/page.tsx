@@ -9,7 +9,7 @@ import {
   BarChart3,
   ShieldCheck,
   CheckCircle2,
-  Sparkles,
+  Sprout,
   ArrowRight,
   Leaf,
   Globe,
@@ -99,9 +99,9 @@ const WhyPartnerUsPage = () => {
   };
 
   return (
-    <div className="min-h-screen py-10 px-4 md:px-8 max-w-7xl mx-auto space-y-20 text-[#1c1917] dark:text-[#f4f0ea]">
+    <div className="min-h-screen py-10 px-4 md:px-8 max-w-7xl mx-auto space-y-20 text-[#1f1c18] dark:text-[#f4f0ea]">
       {/* Breadcrumb & Navigation helper */}
-      <div className="flex items-center gap-2 text-sm font-medium text-[#4b5563] dark:text-[#9ca3af]">
+      <div className="flex items-center gap-2 text-sm font-medium text-[#5e574d] dark:text-[#a49b8f]">
         <Link href="/home" className="hover:text-[#2f4739] dark:hover:text-[#489a69] transition">
           Home
         </Link>
@@ -110,35 +110,35 @@ const WhyPartnerUsPage = () => {
           For Sellers
         </Link>
         <span>/</span>
-        <span className="text-[#1c1917] dark:text-[#f4f0ea] font-semibold">Why Partner With Us</span>
+        <span className="text-[#1f1c18] dark:text-[#f4f0ea] font-semibold">Why Partner With Us</span>
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#f4efe6] via-[#f7f4ee] to-[#e8ede9] dark:from-[#1b2620] dark:via-[#161f1a] dark:to-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 md:p-16 shadow-soft text-center">
+      <section className="relative overflow-hidden rounded-xl bg-[#f1e9dc] dark:bg-[#18211c] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 md:p-16 shadow-soft text-center">
         <div className="max-w-4xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 bg-[#2f4739]/10 dark:bg-[#489a69]/20 border border-[#2f4739]/20 dark:border-[#489a69]/40 px-4 py-2 rounded-full text-[#2f4739] dark:text-[#489a69] font-bold text-xs md:text-sm uppercase tracking-widest">
-            <Sparkles className="w-4 h-4" />
+          <div className="eyebrow">
+            <Sprout className="w-4 h-4" />
             Brand Collective & Partnership
           </div>
 
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-[#1c1917] dark:text-[#f4f0ea]">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-tight text-[#1f1c18] dark:text-[#f4f0ea]">
             Why Partner With <span className="text-[#2f4739] dark:text-[#489a69] italic font-serif">The Green Turtles</span>?
           </h1>
 
-          <p className="text-lg md:text-xl text-[#374151] dark:text-[#d1d5db] leading-relaxed max-w-3xl mx-auto font-normal">
+          <p className="text-lg md:text-xl text-[#4a443c] dark:text-[#d8d0c3] leading-relaxed max-w-3xl mx-auto font-normal">
             A dedicated ecosystem created to help genuinely sustainable brands cut through the greenwashing noise, reach mindful buyers, and scale with integrity.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
               href="#apply-form"
-              className="bg-[#2f4739] hover:bg-[#23372c] text-[#faf7f2] font-semibold py-4 px-8 rounded-full shadow-soft transition active:scale-95 text-base inline-flex items-center gap-2"
+              className="bg-[#2f4739] hover:bg-[#23372c] text-[#f7f1e6] font-semibold py-4 px-8 rounded-lg shadow-soft transition active:scale-95 text-base inline-flex items-center gap-2"
             >
               Apply as Partner <ArrowRight className="w-4 h-4" />
             </a>
             <button
               onClick={() => router.push('/seller-home')}
-              className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#3d5045] text-[#1c1917] dark:text-[#f4f0ea] hover:border-[#2f4739] font-semibold py-4 px-8 rounded-full transition active:scale-95 text-base shadow-soft"
+              className="bg-white dark:bg-[#1a241f] border border-[#cfc4b2] dark:border-[#3d5045] text-[#1f1c18] dark:text-[#f4f0ea] hover:border-[#2f4739] font-semibold py-4 px-8 rounded-lg transition active:scale-95 text-base shadow-soft"
             >
               Visit Seller Home
             </button>
@@ -152,10 +152,10 @@ const WhyPartnerUsPage = () => {
           <p className="text-xs uppercase tracking-[0.25em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
             Core Value Proposition
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+          <h2 className="font-serif text-3xl md:text-5xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             Four Pillars That Drive Your Brand Forward
           </h2>
-          <p className="text-base md:text-lg text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-base md:text-lg text-[#5e574d] dark:text-[#a49b8f]">
             Everything we build is engineered to solve the real distribution and trust challenges sustainable makers face today.
           </p>
         </div>
@@ -195,24 +195,24 @@ const WhyPartnerUsPage = () => {
             return (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-3xl p-8 flex flex-col justify-between shadow-card hover:border-[#2f4739] dark:hover:border-[#489a69] transition duration-300 group"
+                className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-xl p-8 flex flex-col justify-between shadow-card hover:border-[#2f4739] dark:hover:border-[#489a69] transition duration-300 group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-3.5 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-2xl group-hover:scale-110 transition-transform">
+                    <div className="p-3.5 bg-[#e8ede9] dark:bg-[#223028] text-[#2f4739] dark:text-[#489a69] rounded-2xl">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#8d6b4f] dark:text-[#d4a373] bg-[#f7f4ee] dark:bg-[#121815] px-3 py-1 rounded-full border border-[#e7e0d5] dark:border-[#2a3d33]">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#8d6b4f] dark:text-[#d4a373] bg-[#f7f4ee] dark:bg-[#121815] px-3 py-1 rounded-lg border border-[#e7e0d5] dark:border-[#2a3d33]">
                       {pillar.badge}
                     </span>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <h3 className="font-serif text-2xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                     {pillar.title}
                   </h3>
                   <p className="text-xs font-semibold text-[#2f4739] dark:text-[#489a69]">
                     {pillar.subtitle}
                   </p>
-                  <p className="text-sm md:text-base text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+                  <p className="text-sm md:text-base text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>
@@ -223,15 +223,15 @@ const WhyPartnerUsPage = () => {
       </section>
 
       {/* COMPARISON TABLE: THE GREEN TURTLES VS TRADITIONAL PLATFORMS */}
-      <section className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-3xl p-8 md:p-12 shadow-card space-y-8">
+      <section className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-xl p-8 md:p-12 shadow-card space-y-8">
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <p className="text-xs uppercase tracking-[0.25em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
             Platform Comparison
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             Traditional Marketplaces vs. The Green Turtles
           </h2>
-          <p className="text-sm md:text-base text-[#4b5563] dark:text-[#9ca3af]">
+          <p className="text-sm md:text-base text-[#5e574d] dark:text-[#a49b8f]">
             Why ethical and sustainable brands thrive better in a purpose-aligned marketplace.
           </p>
         </div>
@@ -239,7 +239,7 @@ const WhyPartnerUsPage = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[600px]">
             <thead>
-              <tr className="border-b border-[#e7e0d5] dark:border-[#2a3d33] text-xs font-bold uppercase tracking-wider text-[#4b5563] dark:text-[#9ca3af]">
+              <tr className="border-b border-[#e7e0d5] dark:border-[#2a3d33] text-xs font-bold uppercase tracking-wider text-[#5e574d] dark:text-[#a49b8f]">
                 <th className="py-4 px-4">Feature / Platform Dynamic</th>
                 <th className="py-4 px-4 text-[#a74338] bg-[#fdf4f2] dark:bg-[#2d1b19] rounded-t-xl">Conventional Marketplaces</th>
                 <th className="py-4 px-4 text-[#2f4739] dark:text-[#489a69] bg-[#e8ede9] dark:bg-[#16251d] rounded-t-xl font-bold">The Green Turtles</th>
@@ -273,11 +273,11 @@ const WhyPartnerUsPage = () => {
                   green: "Eco-Coins reward ecosystem driving repeat orders to verified sellers",
                 },
               ].map((row, idx) => (
-                <tr key={idx} className="hover:bg-[#faf7f2] dark:hover:bg-[#141d18] transition">
-                  <td className="py-4 px-4 font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                <tr key={idx} className="hover:bg-[#f7f1e6] dark:hover:bg-[#141d18] transition">
+                  <td className="py-4 px-4 font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     {row.feature}
                   </td>
-                  <td className="py-4 px-4 text-[#4b5563] dark:text-[#9ca3af] bg-[#fdf4f2]/40 dark:bg-[#2d1b19]/40">
+                  <td className="py-4 px-4 text-[#5e574d] dark:text-[#a49b8f] bg-[#fdf4f2]/40 dark:bg-[#2d1b19]/40">
                     ✕ {row.traditional}
                   </td>
                   <td className="py-4 px-4 font-medium text-[#2f4739] dark:text-[#489a69] bg-[#e8ede9]/40 dark:bg-[#16251d]/40">
@@ -296,7 +296,7 @@ const WhyPartnerUsPage = () => {
           <p className="text-xs uppercase tracking-[0.25em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
             Simple Onboarding
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
             Four Steps to Join the Collective
           </h2>
         </div>
@@ -326,15 +326,15 @@ const WhyPartnerUsPage = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-3xl p-6 relative shadow-soft space-y-4"
+              className="bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-xl p-6 relative shadow-soft space-y-4"
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#2f4739] text-[#faf7f2] font-serif font-bold text-xl flex items-center justify-center shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-[#2f4739] text-[#f7f1e6] font-serif font-medium text-xl flex items-center justify-center shadow-xs">
                 {item.step}
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+              <h3 className="font-serif text-xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                 {item.title}
               </h3>
-              <p className="text-sm text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+              <p className="text-sm text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -346,19 +346,19 @@ const WhyPartnerUsPage = () => {
       <section id="apply-form" className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         {/* Left info column */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-[#f7f4ee] dark:bg-[#161f1a] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 md:p-10 rounded-3xl space-y-6">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#8d6b4f] dark:text-[#d4a373]">
+          <div className="bg-[#f7f4ee] dark:bg-[#161f1a] border border-[#e7e0d5] dark:border-[#2a3d33] p-8 md:p-10 rounded-xl space-y-6">
+            <span className="text-xs uppercase tracking-[0.14em] font-bold text-[#8d6b4f] dark:text-[#d4a373]">
               Let's Connect
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
               Start Your Brand Partnership
             </h2>
-            <p className="text-base text-[#374151] dark:text-[#d1d5db] leading-relaxed">
+            <p className="text-base text-[#4a443c] dark:text-[#d8d0c3] leading-relaxed">
               Whether you are an emerging eco-artisan or an established sustainable manufacturer, we want to hear about your mission.
             </p>
 
             <div className="space-y-4 pt-4 border-t border-[#e7e0d5] dark:border-[#2a3d33] text-sm font-medium">
-              <div className="flex items-center gap-3 text-[#1c1917] dark:text-[#f4f0ea]">
+              <div className="flex items-center gap-3 text-[#1f1c18] dark:text-[#f4f0ea]">
                 <Mail className="w-5 h-5 text-[#2f4739] dark:text-[#489a69] shrink-0" />
                 <span>
                   Direct email:{' '}
@@ -368,7 +368,7 @@ const WhyPartnerUsPage = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 text-[#1c1917] dark:text-[#f4f0ea]">
+              <div className="flex items-center gap-3 text-[#1f1c18] dark:text-[#f4f0ea]">
                 <Globe className="w-5 h-5 text-[#2f4739] dark:text-[#489a69] shrink-0" />
                 <span>
                   Official Web:{' '}
@@ -378,7 +378,7 @@ const WhyPartnerUsPage = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 text-[#1c1917] dark:text-[#f4f0ea]">
+              <div className="flex items-center gap-3 text-[#1f1c18] dark:text-[#f4f0ea]">
                 <Instagram className="w-5 h-5 text-[#2f4739] dark:text-[#489a69] shrink-0" />
                 <span>
                   Instagram:{' '}
@@ -393,7 +393,7 @@ const WhyPartnerUsPage = () => {
               <p className="text-xs font-bold uppercase tracking-wider text-[#2f4739] dark:text-[#489a69]">
                 Early Partner Benefit
               </p>
-              <p className="text-xs text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
+              <p className="text-xs text-[#5e574d] dark:text-[#a49b8f] leading-relaxed">
                 Early cohort partners receive 0% listing fee, premium homepage feature rotation, and dedicated social spotlight for their initial 6 months.
               </p>
             </div>
@@ -401,12 +401,12 @@ const WhyPartnerUsPage = () => {
         </div>
 
         {/* Right application form */}
-        <div className="lg:col-span-7 bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-3xl p-8 md:p-12 shadow-card">
+        <div className="lg:col-span-7 bg-white dark:bg-[#1a241f] border border-[#e7e0d5] dark:border-[#2a3d33] rounded-xl p-8 md:p-12 shadow-card">
           <div className="mb-8 space-y-2">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+            <h3 className="font-serif text-2xl md:text-3xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
               Partnership Inquiry Form
             </h3>
-            <p className="text-sm text-[#4b5563] dark:text-[#9ca3af]">
+            <p className="text-sm text-[#5e574d] dark:text-[#a49b8f]">
               Please fill in your brand details and our partnership team will reach out within 24-48 hours.
             </p>
           </div>
@@ -414,16 +414,16 @@ const WhyPartnerUsPage = () => {
           {submitted ? (
             <div className="p-8 text-center bg-[#e8ede9] dark:bg-[#16251d] rounded-2xl border border-[#2f4739]/30 space-y-4">
               <CheckCircle2 className="w-12 h-12 text-[#2f4739] dark:text-[#489a69] mx-auto" />
-              <h4 className="font-serif text-2xl font-bold text-[#1c1917] dark:text-[#f4f0ea]">
+              <h4 className="font-serif text-2xl font-medium text-[#1f1c18] dark:text-[#f4f0ea]">
                 Thank You for Applying!
               </h4>
-              <p className="text-sm text-[#374151] dark:text-[#d1d5db]">
+              <p className="text-sm text-[#4a443c] dark:text-[#d8d0c3]">
                 We have received your brand inquiry. A confirmation has been logged and our team is excited to review your submission.
               </p>
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="bg-[#2f4739] text-[#faf7f2] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#23372c] transition"
+                className="bg-[#2f4739] text-[#f7f1e6] px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#23372c] transition"
               >
                 Submit Another Inquiry
               </button>
@@ -432,7 +432,7 @@ const WhyPartnerUsPage = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Contact Person Name *
                   </label>
                   <input
@@ -440,14 +440,14 @@ const WhyPartnerUsPage = () => {
                     name="contact_name"
                     value={formData.contact_name}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                     placeholder="e.g. Maya Sharma"
                     required
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Email Address *
                   </label>
                   <input
@@ -455,7 +455,7 @@ const WhyPartnerUsPage = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                     placeholder="partner@yourbrand.com"
                     required
                   />
@@ -464,7 +464,7 @@ const WhyPartnerUsPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Brand Name *
                   </label>
                   <input
@@ -472,14 +472,14 @@ const WhyPartnerUsPage = () => {
                     name="brand_name"
                     value={formData.brand_name}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                     placeholder="Your Eco Brand"
                     required
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Phone Number (Optional)
                   </label>
                   <input
@@ -487,7 +487,7 @@ const WhyPartnerUsPage = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -495,7 +495,7 @@ const WhyPartnerUsPage = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Website or Social Handle
                   </label>
                   <input
@@ -503,20 +503,20 @@ const WhyPartnerUsPage = () => {
                     name="website_url"
                     value={formData.website_url}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                     placeholder="https://yourbrand.com or @handle"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                  <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                     Primary Product Category
                   </label>
                   <select
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                    className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                   >
                     <option value="Home & Living">Home & Living</option>
                     <option value="Apparel & Textiles">Apparel & Textiles</option>
@@ -529,7 +529,7 @@ const WhyPartnerUsPage = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                   Key Sustainability Credentials or Materials (Optional)
                 </label>
                 <input
@@ -537,13 +537,13 @@ const WhyPartnerUsPage = () => {
                   name="certifications"
                   value={formData.certifications}
                   onChange={handleChange}
-                  className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm"
+                  className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm"
                   placeholder="e.g. Organic GOTS cotton, FSC certified bamboo, plastic-free packaging"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-[#1c1917] dark:text-[#f4f0ea]">
+                <label className="text-sm font-semibold text-[#1f1c18] dark:text-[#f4f0ea]">
                   Tell Us About Your Brand & Proposal
                 </label>
                 <textarea
@@ -551,14 +551,14 @@ const WhyPartnerUsPage = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-[#faf7f2] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1c1917] dark:text-[#f4f0ea] text-sm resize-none"
+                  className="w-full bg-[#f7f1e6] dark:bg-[#121815] border border-[#e7e0d5] dark:border-[#2a3d33] px-4 py-3 rounded-xl focus:border-[#2f4739] focus:outline-none text-[#1f1c18] dark:text-[#f4f0ea] text-sm resize-none"
                   placeholder="What makes your products sustainable? What are your goals with The Green Turtles?"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#2f4739] hover:bg-[#23372c] text-[#faf7f2] font-semibold py-4 px-8 rounded-full shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
+                className="w-full bg-[#2f4739] hover:bg-[#23372c] text-[#f7f1e6] font-semibold py-4 px-8 rounded-lg shadow-soft transition active:scale-95 text-base flex items-center justify-center gap-2"
               >
                 Submit Partnership Application <ArrowRight className="w-4 h-4" />
               </button>
