@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, ShoppingBag, Store } from 'lucide-react';
 import SvgLogo from '@/svg';
 import { AppContext } from '@/context/AppContext';
+import { isValidEmail } from '@/lib/validation';
 
 const RegisterPage = () => {
   const { registerUser, showMessage }: any = useContext(AppContext) || {};
@@ -21,6 +22,21 @@ const RegisterPage = () => {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!email) {
+      showMessage?.('Please enter your email address.');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      showMessage?.('Please enter a valid email address (e.g. name@example.com).');
+      return;
+    }
+
+    if (!password || password.length < 6) {
+      showMessage?.('Password must be at least 6 characters long.');
+      return;
+    }
 
     const registrationData = {
       email,

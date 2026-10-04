@@ -7,6 +7,8 @@ import { Lock, Mail, ArrowRight, Sparkles } from 'lucide-react';
 import SvgLogo from '@/svg';
 import { AppContext } from '@/context/AppContext';
 
+import { isValidEmail } from '@/lib/validation';
+
 const LoginPage = () => {
   const { loginUser, requestPasswordReset, showMessage }: any =
     useContext(AppContext) || {};
@@ -24,6 +26,12 @@ const LoginPage = () => {
 
     if (!email || !password) {
       showMessage?.('Please enter both email and password.');
+      return;
+    }
+
+    const adminId = process.env.NEXT_PUBLIC_ADMIN_ID || 'admin';
+    if (email !== adminId && !isValidEmail(email)) {
+      showMessage?.('Please enter a valid email address.');
       return;
     }
 
@@ -64,20 +72,21 @@ const LoginPage = () => {
       return;
     }
 
-    setIsSendingReset(true);
-    const { error, mode } = await requestPasswordReset(resetEmail);
-    setIsSendingReset(false);
-
-    if (error) {
-      showMessage?.(`Error: ${error.message}`);
+    if (!isValidEmail(resetEmail)) {
+      showMessage?.('Please enter a valid email address.');
       return;
     }
 
-    showMessage?.(
-      mode === 'local'
-        ? 'Demo mode: password reset simulated locally.'
-        : 'Password reset link sent! Check your email.'
-    );
+    setIsSendingReset(true);
+    const { error, message } = await requestPasswordReset(resetEmail);
+    setIsSendingReset(false);
+
+    if (error) {
+      showMessage?.(error.message);
+      return;
+    }
+
+    showMessage?.(message || 'Password reset link sent! Check your email.');
     setEmail(resetEmail);
     setShowForgotPassword(false);
   };

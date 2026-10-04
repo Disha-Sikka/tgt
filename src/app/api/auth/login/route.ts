@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/mongodb';
+import { isValidEmail } from '@/lib/validation';
 import crypto from 'crypto';
 
 export async function POST(request: Request) {
@@ -22,6 +23,11 @@ export async function POST(request: Request) {
         user_metadata: {},
       };
       return NextResponse.json({ user: adminUser, role: 'admin' });
+    }
+
+    // Validate email format
+    if (email !== adminId && !isValidEmail(email)) {
+      return NextResponse.json({ error: 'Please enter a valid email address' }, { status: 400 });
     }
 
     const { db } = await connectToDatabase();

@@ -445,7 +445,47 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   );
 
   const requestPasswordReset = useCallback(async (email: string) => {
-    return { error: null, mode: 'local' };
+    try {
+      const response = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      if (!response.ok || data.error) {
+        return { error: new Error(data.error || 'Failed to send reset link'), message: null };
+      }
+
+      return {
+        error: null,
+        message: data.message || 'Password reset link sent! Check your email.',
+        devResetLink: data.devResetLink || null,
+      };
+    } catch (err: any) {
+      console.error('Request password reset error:', err);
+      return { error: new Error(err.message || 'Network error occurred'), message: null };
+    }
+  }, []);
+
+  const resetPasswordWithToken = useCallback(async (token: string, newPassword: string) => {
+    try {
+      const response = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token, newPassword }),
+      });
+
+      const data = await response.json();
+      if (!response.ok || data.error) {
+        return { error: new Error(data.error || 'Failed to reset password') };
+      }
+
+      return { error: null, message: data.message };
+    } catch (err: any) {
+      console.error('Reset password error:', err);
+      return { error: new Error(err.message || 'Network error occurred') };
+    }
   }, []);
 
   const updatePassword = useCallback(
@@ -786,6 +826,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       logoutUser,
       updateProfile,
       requestPasswordReset,
+      resetPasswordWithToken,
       updatePassword,
       addSellerProduct,
       deleteSellerProduct,
@@ -814,6 +855,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       removeFromCart,
       role,
       requestPasswordReset,
+      resetPasswordWithToken,
       selectedProduct,
       showMessage,
       showMessageModal,
